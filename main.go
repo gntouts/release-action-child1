@@ -22,7 +22,7 @@ func main() {
 		fmt.Println(versionString)
 		args = []string{"--version"}
 	} else {
-		newArgs := make([]string, len(args))
+		newArgs := make([]string, 0, len(args))
 		for _, arg := range args {
 			temp := strings.ToUpper(arg)
 			newArgs = append(newArgs, temp)
