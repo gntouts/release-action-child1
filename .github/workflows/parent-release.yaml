@@ -12,7 +12,7 @@ on:
         type: string
         required: false
 env:
-  PARENT_REPO: 'gntouts/release-action-parent'
+  PARENT_REPO: "gntouts/release-action-parent"
 
 jobs:
   process-main-build:
