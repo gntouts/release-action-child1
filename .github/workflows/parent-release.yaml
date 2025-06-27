@@ -1,5 +1,8 @@
 name: Build on Parent Release
-
+run-name: >-
+  ${{ (github.event_name == 'workflow_dispatch') &&
+    github.event.inputs.run-name || github.event.client_payload.run-name }}
+    
 on:
   workflow_dispatch:
     inputs:
