@@ -150,10 +150,9 @@ jobs:
         else
           echo "No artifacts were downloaded"
         fi
-    - name: Simulate failed build
+    - name: Simulate successful build
       run: |
-        echo "Simulating a failed build for testing"
-        exit 1
+        echo "Simulating a successful build for testing"
     - name: Upload artifacts to parent release
       uses: softprops/action-gh-release@v2
       with:
