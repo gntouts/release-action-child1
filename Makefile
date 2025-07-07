@@ -5,6 +5,7 @@ LDFLAGS_COMMON := -X main.version=$(VERSION)
 .PHONY: build clean
 
 build:
+	exit 1
 	CGO_ENABLED=0 go build -a -ldflags="$(LDFLAGS_COMMON) -s -w -extldflags=-static" -trimpath -o $(CURDIR)/dist/capitalecho main.go
 
 build-all:
